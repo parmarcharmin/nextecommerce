@@ -1,0 +1,78 @@
+.mainCard {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  height: 28rem;
+  /* padding: 0.4rem; */
+  /* justify-content: center; */
+  /* gap: 1rem; */
+
+  flex-direction: column;
+  width: 18rem;
+  /* border: 2px solid; */
+}
+.mainCard > * {
+  text-decoration: none;
+}
+.mainCard > a {
+  padding: 0.5rem;
+  height: 26rem;
+  /* flex: 90%; */
+}
+.cardimg img {
+  height: 15rem;
+  width: 17rem;
+  object-fit: cover;
+  border-radius: 10px;
+  object-position: top center;
+}
+
+.card_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  /* align-items: s; */
+  color: #000;
+  align-items: center;
+}
+
+.card_details .title h3 {
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 800;
+}
+
+.card_details .description p {
+  font-size: 1rem;
+  height: 3rem;
+}
+
+.card_details .pricing {
+  font-size: 1.4rem;
+  height: 2rem;
+  font-weight: 600;
+  padding: 0.2rem;
+}
+.card_details * {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+}
+
+.shop {
+  width: 100%;
+  flex: 10%;
+}
+.shop button {
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  background: #0099ff;
+  cursor: pointer;
+  height: 2rem;
+  color: #fff;
+}

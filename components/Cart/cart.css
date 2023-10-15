@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script:wght@600&family=Space+Grotesk:wght@500&family=Yeseva+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Dancing+Script:wght@600&family=Libre+Baskerville&family=Space+Grotesk:wght@500&family=Yeseva+One&display=swap');
+.cart {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  /* width: 5vw; */
+  z-index: 99999;
+  /* margin: 1rem; */
+}
+
+.cart .logo_container button.cart_logo {
+  background: none;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+.cart .logo_container{
+  background: #0099ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.cart .cart_items {
+  width: 15px;
+  position: absolute;
+  display: flex;
+  height: 15px;
+  top: 1rem;
+  background: #fff;
+  left: 1.4rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+
+
+.cart_sidebar.active {
+   
+  transform: translateX(0px);
+}
+.cart_sidebar {
+   overflow-y: scroll;
+  /* display: none; */
+  box-shadow: 0 0 10px;
+  position: fixed;
+  right: 0;
+  z-index: 1001;
+  padding: 1rem;
+  background-color: #fff;
+  top: 0;
+  transform: translateX(510px);
+  width: 500px;
+  transition: all 0.5s ease-in-out ;
+  height: 100%;
+}
+
+.headBox button {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  height: 6vh;
+  /* flex: 10%; */
+}
+.headBox{
+    display: flex;
+    flex-direction: row;
+    gap: 9rem;
+    align-items: center;
+}
+.headBox .cart_title{
+    font-family: 'Libre Baskerville', serif;    
+}
+.cart_items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.item {
+  height: 8rem;
+ border-bottom: 1.5px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item .first-half {
+  flex: 35%;
+  display: flex;
+  height: 7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .first-half img {
+  height: 7rem;
+  width: 7rem;
+  object-fit: cover;
+}
+
+.item .second-half {
+  height: 7rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.item .second-half .title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.item .second-half .description {
+  color: #777;
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+.item .second-half .product_details {
+  font-family: "Yeseva One", cursive;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.addQuantities{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    height: 5vh;
+}
+
+
+.addQuantities button{
+    background: none;
+    border: none;
+    color: #0c67a3;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+
+
+.checkout{
+    display: flex;
+    gap: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* bottom: 0; */
+    margin-top: 1rem;
+}
+.checkout button {
+    font-size: 1.1rem;
+    background: none;
+    border: 1.5px solid rgba(92, 92, 255, 0.6);
+    height: 3rem;
+    width: 10rem;
+    cursor: pointer;
+    border-radius:2px ;
+    transition: all 0.4s ease-in-out;
+}
+.checkout button:hover {
+    background: #0099ff;
+    color: #fff;
+}
+
+
+.mainSide{
+    position: absolute;
+    right: 0;
+    width: 510px;
+    overflow-x:hidden ;
+    top: 0;
+    height: 100%;
+}
+
+
+@media (max-width:505px) {
+    .cart_sidebar{
+        width: 300px;
+    }
+    .headBox{
+        gap: 3.5rem;
+    }
+    .headBox button{
+        font-size: 1rem;
+    }
+    .headBox .cart_title{
+        font-size: 0.7rem;
+    }
+    .item {
+        gap: 1rem;
+        height: 5rem;
+    }
+    .item .first-half {
+        flex: 25%;
+    }
+    .item .first-half img {
+        height: 4rem;
+        width: 4rem;
+    }
+    
+.item .second-half {
+    flex: 80%;
+    height: 4rem;
+}
+    .item .second-half .title {
+        font-size: 1rem;
+    }
+   
+.item .second-half .description {
+    font-size: 0.6rem;
+    /* width: 15rem; */
+    
+}
+    .item .second-half {
+        gap: 0.4rem;
+    }
+    .addQuantities{
+        height: 1rem;
+    }
+    
+.addQuantities button{
+    font-size: 0.8rem;
+}
+}

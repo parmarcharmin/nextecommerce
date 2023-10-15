@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+.footer {
+  font-family: "Acme", sans-serif;
+  width: 100%;
+  padding: 3rem 0rem;
+  height: 400px;
+  color: #fff;
+
+  background-color: #0099ff;
+}
+
+.columns-4 {
+  font-size: 20px;
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+.company {
+  display: flex;
+  width: 230px;
+  flex-direction: column;
+  height: 215px;
+  justify-content: space-between;
+}
+.company > div {
+  margin-top: 10px;
+}
+
+.name {
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+
+.main-footer-column {
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-footer-column ul li {
+  text-decoration: none;
+  color: #fff;
+}
+.main-footer-column ul li > * {
+  text-decoration: none;
+  color: #ffffffe4;
+}
+
+.Resp-Footer{
+  display: none;
+}
+@media (max-width:689px) {
+
+  .columns-4{
+    display: none;
+  }
+  .Resp-Footer{
+    flex-direction: column;
+    gap: 1.2rem;
+    display: flex;
+  }
+  .MuiPaper-elevation{
+    background: none !important;
+    box-shadow: none;
+    text-align: center !important;
+    justify-content: center;
+    color: #fff !important;
+    align-items: center;
+    flex-direction: column !important;
+    display: flex;
+  }
+  .MuiAccordionSummary-content p{
+    text-align: center !important;
+  }
+}

@@ -1,0 +1,261 @@
+@import url(https://db.onlinewebfonts.com/c/1c1304897225af0847614d4bc5430c5e?family=Linotte-Regular);
+@import url("https://fonts.cdnfonts.com/css/pricetag");
+.upperDiv {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  /* width: 80vw; */
+  margin: 2rem;
+}
+
+.slider{
+  display: none;
+}
+
+
+.mainProductPage {
+  display: flex;
+  background: #e3f4ff;
+  width: 90vw;
+
+  height: 100%;
+  padding: 2rem;
+  box-shadow: 0 0 2px;
+  /* border : 2px solid red; */
+}
+.product_images_grid {
+  display: flex;
+  /* border: 2px dotted green; */
+  flex: 50%;
+  gap: 0.5rem;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 0.5rem;
+  flex-direction: column;
+  height: 90vh;
+  /* height: 60rem; */
+}
+.product_images {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 30vw;
+  justify-content: space-around;
+}
+.product_images img {
+  height: 6rem;
+  cursor: pointer;
+  width: 6rem;
+  object-fit: cover;
+  /* overflow: hidden; */
+  object-position: top center;
+  transition: all 0.3s ease;
+}
+
+.product_images img:hover {
+  transform: scale(1.2);
+}
+.product_images .product_img {
+  height: 6rem;
+  width: 6rem;
+  border: 2px solid;
+  overflow: hidden;
+}
+.product_display_image {
+  /* width: 25vw; */
+  overflow: hidden;
+  height: 75vh;
+  width: 35vw;
+  /* back */
+  position: relative;
+  z-index: 167;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 5px;
+}
+.product_display_image img {
+  height: 90vh;
+  width: 35vw;
+  object-fit: cover;
+  position: relative;
+  z-index: 178;
+  z-index: 788;
+  object-position: top center;
+}
+
+.product_display_image img:hover {
+  cursor: zoom-in;
+}
+.product_detail {
+  flex: 50%;
+}
+
+.product_detail {
+  background-color: #fff;
+  /* overflow-y: scroll; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.4rem;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px;
+  /* width: 50vw; */
+}
+
+.product_title h3 {
+  font-family: "Linotte-Regular";
+}
+.product_title {
+  /* height: 6rem; */
+  /* border: 2px solid; */
+  font-family: "Linotte-Regular";
+}
+
+.product_color_picker button {
+  border: 0.1px solid;
+  padding: 0;
+  height: 2rem;
+  /* transition: all 0.2s ease-out; */
+
+  width: 2rem;
+}
+
+.product_color_picker {
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  height: 3rem;
+}
+.product_color_picker button:hover {
+  height: 2.2rem;
+
+  width: 2.2rem;
+}
+.product_size_pricker {
+  display: flex;
+  gap: 1rem;
+}
+.add_quantity_box{
+  display: flex;
+  gap: 1rem;
+}
+.add_quantity {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.add_quantity button {
+  height: 2rem;
+  color: #0099ff;
+  width: 2rem;
+  /* background-color: rgb(244, 232, 255); */
+}
+
+.add_quantity button:hover {
+  background-color: #a1d9ff;
+}
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 2rem;
+  font-family: "Pricetag", sans-serif;
+  font-size: 1.2rem !important;
+}
+.pricing .original h5 {
+  /* font-size: 0.8rem; */
+  /* margin-top: 0.3rem; */
+
+  /* margin-bottom: 0.3rem; */
+
+  text-decoration: line-through;
+}
+.pricing .discounted h4 {
+  /* margin-top: 0.3rem; */
+  font-size: 1.5rem;
+  /* margin-bottom: 0.3rem; */
+}
+
+.add_buy_button {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.discription_buttons > div {
+  background-color: #e9e9e9;
+}
+
+@media (max-width: 921px) {
+  .mainProductPage {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .product_display_image {
+    width: 100%;
+  }
+  .product_display_image img {
+    width: 100%;
+  }
+  .product_images {
+    width: 100%;
+    height: 100%;
+    height: 4rem;
+    display: none;
+  }
+  .product_display_image{
+    display: none;
+  }
+  .slider{
+    display: flex;
+  }
+
+}
+
+@media (max-width: 598px) {
+
+  .product_display_image{
+    height: 100%;
+  }
+.product_detail{
+  width: 100vw;
+}
+.product_images_grid{
+  height: 100%;
+  margin-top: 1rem;
+}
+.upperDiv{
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+.mainProductPage{
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  width: 100vw;
+}
+
+.product_detail{
+  background: none;
+  box-shadow: none;
+}
+  .product_color_picker{
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .product_size_pricker{
+    width: 70vw;
+    margin-bottom: 1rem;
+    flex-wrap: wrap
+    ;
+  }
+}

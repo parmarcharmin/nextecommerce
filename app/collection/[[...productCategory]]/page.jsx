@@ -5,7 +5,7 @@ import "@/components/Products/productPage.css"
 import { Pagination } from "@mui/material";
 import axios from 'axios'
 import Loader from "@/components/Loader/Loader";
-
+import {products} from "@/public/products";
 const page = ({ params }) => {
   let productCategory = params.productCategory;
   let productfilter = params.productfilter;
@@ -47,12 +47,9 @@ const page = ({ params }) => {
         <div className="products">
         
           {
-            loading ? <Loader/> : (
-            product.map((item)=>{
-              // console.log(item.productDescription)
+          products.map((item)=>{
               return <ProductCard product={item} key={item._id}/>
-            })
-            )
+            }) 
           }
       
         </div>

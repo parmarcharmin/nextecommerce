@@ -15,6 +15,7 @@ import Corousal from "@/components/Corousal/manualCorousal/Corousal";
 import { SliderData } from "@/components/Corousal/manualCorousal/SliderData";
 import { useStateContext } from "@/context/StateContext";
 import { useDispatch, useSelector } from "react-redux";
+import { products } from "@/public/products";
 
 const ProductPage = ({ productSlug }) => {
 
@@ -55,16 +56,14 @@ const ProductPage = ({ productSlug }) => {
     setmainImg(e.target.getAttribute("src"));
   };
   useEffect(() => {
-    let functionFind = async () => {
-      let product = await fetch(
-        `http://localhost:8000/productSlug/${productSlug}`
-      );
-      let response = await product.json();
+  
+     
+      let response = products[6];
       console.log(response);
-      setproduct(response[0]);
-      setmainImg(response[0].productImage[0]);
-    };
-    functionFind();
+      setproduct(response);
+      setmainImg(response.productImage[0]);
+  
+    // functionFind();
   }, []);
   return (
     <>
